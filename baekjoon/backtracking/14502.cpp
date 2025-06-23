@@ -1,4 +1,4 @@
-// bfs¸¦ »ç¿ëÇÏ±äÇßÁö¸¸ ¹éÆ®·¡Å·À¸·Î º®À» ¼¼¿ì´Â ºÎºÐÀÌ Áß¿äÇÏ´Ù°í »ý°¢ÇØ¼­ ¹éÆ®·¡Å·À¸·Î ºÐ·ù, Å½»öÀº dfs¸¦ »ç¿ëÇØµµ µÇ±â ‹š¹®¿¡
+// bfsë¥¼ ì‚¬ìš©í•˜ê¸´í–ˆì§€ë§Œ ë°±íŠ¸ëž˜í‚¹ìœ¼ë¡œ ë²½ì„ ì„¸ìš°ëŠ” ë¶€ë¶„ì´ ì¤‘ìš”í•˜ë‹¤ê³  ìƒê°í•´ì„œ ë°±íŠ¸ëž˜í‚¹ìœ¼ë¡œ ë¶„ë¥˜, íƒìƒ‰ì€ dfsë¥¼ ì‚¬ìš©í•´ë„ ë˜ê¸° ë•Œë¬¸ì—
 #include <iostream>
 #include <queue>
 #include <algorithm>
