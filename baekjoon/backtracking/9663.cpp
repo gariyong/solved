@@ -1,3 +1,6 @@
+// 문제: https://www.acmicpc.net/problem/9663
+// 제목: N-Queens
+
 #include <iostream>
 #include <vector>
 #include <cmath>

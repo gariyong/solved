@@ -1,3 +1,6 @@
+// 문제: https://www.acmicpc.net/problem/1238
+// 제목: 파티
+
 #include <iostream>
 #include <vector>
 #include <queue>

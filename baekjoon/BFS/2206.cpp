@@ -1,3 +1,6 @@
+// 문제: https://www.acmicpc.net/problem/2206
+// 제목: 벽 부수고 이동하기
+
 #include <iostream>
 #include <queue>
 #include <algorithm>

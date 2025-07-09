@@ -1,3 +1,6 @@
+// 문제: https://www.acmicpc.net/problem/13172
+// 제목: ∑
+
 #include <iostream>
 
 using namespace std;

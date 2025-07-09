@@ -1,4 +1,6 @@
-// 아기상어(간만에 하니까 머리가 안굴러감 ㅎ)
+// 문제: https://www.acmicpc.net/problem/16236
+// 제목: 아기 상어
+
 #include <iostream>
 #include <queue>
 #include <cmath>

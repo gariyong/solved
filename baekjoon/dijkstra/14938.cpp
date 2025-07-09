@@ -1,3 +1,6 @@
+// 문제: https://www.acmicpc.net/problem/14938
+// 제목: 서강그라운드
+
 #include <iostream>
 #include <queue>
 #include <algorithm>

@@ -1,3 +1,6 @@
+// 巩力: https://www.acmicpc.net/problem/1068
+// 力格: 飘府
+
 #include <iostream>
 #include <vector>
 #include <queue>

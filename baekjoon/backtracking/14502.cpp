@@ -1,3 +1,6 @@
+// 문제: https://www.acmicpc.net/problem/14502
+// 제목: 연구소
+
 // bfs를 사용하긴했지만 백트래킹으로 벽을 세우는 부분이 중요하다고 생각해서 백트래킹으로 분류, 탐색은 dfs를 사용해도 되기 때문에
 #include <iostream>
 #include <queue>
