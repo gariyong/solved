@@ -1,7 +1,7 @@
-// ¹®Á¦: https://www.acmicpc.net/problem/1918
-// Á¦¸ñ: ÈÄÀ§ Ç¥±â½Ä
+// ë¬¸ì œ: https://www.acmicpc.net/problem/1918
+// ì œëª©: í›„ìœ„ í‘œê¸°ì‹
 
-// Ã³À½¿£ ¿ì¼±¼øÀ§ ¾øÀÌ ÇØº¸·ÁÇßÁö¸¸ ¿¬»êÀÚ ¿ì¼±¼øÀ§¸¦ °í·ÁÇØ¼­ Ç®¾î¾ß ÄÚµå°¡ °£°áÇÏ°í ¹Ý·Ê°¡ ¾ø¾ú´Ù.
+// ì²˜ìŒì—” ìš°ì„ ìˆœìœ„ ì—†ì´ í•´ë³´ë ¤í–ˆì§€ë§Œ ì—°ì‚°ìž ìš°ì„ ìˆœìœ„ë¥¼ ê³ ë ¤í•´ì„œ í’€ì–´ì•¼ ì½”ë“œê°€ ê°„ê²°í•˜ê³  ë°˜ë¡€ê°€ ì—†ì—ˆë‹¤.
 #include <iostream>
 #include <stack>
 #include <string>
