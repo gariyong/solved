@@ -1,5 +1,5 @@
-// ¹®Á¦ : https://www.acmicpc.net/problem/2342
-// Á¦¸ñ : Dance Dance Revolution
+// Â¹Â®ÃÂ¦ : https://www.acmicpc.net/problem/2342
+// ÃÂ¦Â¸Ã± : Dance Dance Revolution
 
 #include <iostream>
 #include <vector>
