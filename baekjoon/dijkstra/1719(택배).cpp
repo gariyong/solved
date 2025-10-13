@@ -1,5 +1,5 @@
-// ¹®Á¦ : https://www.acmicpc.net/problem/1719
-// Á¦¸ñ : ÅÃ¹è
+// ë¬¸ì œ : https://www.acmicpc.net/problem/1719
+// ì œëª© : íƒë°°
 
 #include <iostream>
 #include <vector>
@@ -11,35 +11,35 @@ using namespace std;
 
 const int INF = 1e9;
 
-// ´ÙÀÍ½ºÆ®¶ó ¾Ë°í¸®Áò
+// ë‹¤ìµìŠ¤íŠ¸ë¼ ì•Œê³ ë¦¬ì¦˜
 void dijkstra(vector<vector<pair<int, int>>>& nodes, vector<vector<int>>& path, int start, int n) {
-	vector<int> dist(n + 1, INF); // °Å¸® ¹è¿­ ÃÊ±âÈ­ 
-	dist[start] = 0; // ½ÃÀÛÁ¡¿¡¼­ºÎÅÍ ½ÃÀÛÁ¡±îÁöÀÇ °Å¸®´Â 0
+	vector<int> dist(n + 1, INF); // ê±°ë¦¬ ë°°ì—´ ì´ˆê¸°í™” 
+	dist[start] = 0; // ì‹œì‘ì ì—ì„œë¶€í„° ì‹œì‘ì ê¹Œì§€ì˜ ê±°ë¦¬ëŠ” 0
 
-	// [ºñ¿ë, ÇöÀç³ëµå]ÀúÀåÇÏ´Â ¿ì¼±¼øÀ§ Å¥(ÃÖ¼Ò Èü)
+	// [ë¹„ìš©, í˜„ì¬ë…¸ë“œ]ì €ì¥í•˜ëŠ” ìš°ì„ ìˆœìœ„ í(ìµœì†Œ í™)
 	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>>	q;
-	q.push({ 0, start }); // ½ÃÀÛ ³ëµå¸¦ Å¥¿¡ ³ÖÀ½
+	q.push({ 0, start }); // ì‹œì‘ ë…¸ë“œë¥¼ íì— ë„£ìŒ
 
 	while (!q.empty()) {
-		auto [cost, cur] = q.top(); // ÇöÀç±îÁöÀÇ ºñ¿ë°ú ³ëµå
+		auto [cost, cur] = q.top(); // í˜„ì¬ê¹Œì§€ì˜ ë¹„ìš©ê³¼ ë…¸ë“œ
 		q.pop();
 
-		// ÀÌ¹Ì ´õ ÂªÀº °æ·Î°¡ Á¸ÀçÇÑ´Ù¸é ½ºÅµ
+		// ì´ë¯¸ ë” ì§§ì€ ê²½ë¡œê°€ ì¡´ì¬í•œë‹¤ë©´ ìŠ¤í‚µ
 		if (cost > dist[cur]) continue;
 
-		// ÇöÀç ³ëµå¿¡¼­ ÀÌµ¿ °¡´ÉÇÑ ¸ğµç ÀÎÁ¢ ³ëµå Å½»ö
+		// í˜„ì¬ ë…¸ë“œì—ì„œ ì´ë™ ê°€ëŠ¥í•œ ëª¨ë“  ì¸ì ‘ ë…¸ë“œ íƒìƒ‰
 		for (auto [next, n_cost] : nodes[cur]) {
 
-			// ÇöÀç ³ëµå¸¦ °ÅÃÄ¼­ °¡´Â ºñ¿ëÀÌ ´õ ÀÛÀ¸¸é °»½Å
+			// í˜„ì¬ ë…¸ë“œë¥¼ ê±°ì³ì„œ ê°€ëŠ” ë¹„ìš©ì´ ë” ì‘ìœ¼ë©´ ê°±ì‹ 
 			if (dist[cur] + n_cost < dist[next]) {
 				dist[next] = dist[cur] + n_cost;
 				q.push({ dist[next], next });
 
-				// ½ÃÀÛÁ¡¿¡¼­ ¹Ù·Î ÀÎÁ¢ÇÑ Á¡ÀÌ¸é °¡Àå ¸ÕÀú Á¢ÇØ¾ßÇÒ ÁıÇÏÀåÀ¸·Î ¼³Á¤
+				// ì‹œì‘ì ì—ì„œ ë°”ë¡œ ì¸ì ‘í•œ ì ì´ë©´ ê°€ì¥ ë¨¼ì € ì ‘í•´ì•¼í•  ì§‘í•˜ì¥ìœ¼ë¡œ ì„¤ì •
 				if (cur == start) {
 					path[start][next] = next;
 				}
-				// ±×·¸Áö ¾ÊÀ¸¸é, ÇöÀç ³ëµå·Î °¡´Â Ã¹ ¹øÂ° ÁıÇÏÀåÀ» ±×´ë·Î ÀÌ¾î¹ŞÀ½
+				// ê·¸ë ‡ì§€ ì•Šìœ¼ë©´, í˜„ì¬ ë…¸ë“œë¡œ ê°€ëŠ” ì²« ë²ˆì§¸ ì§‘í•˜ì¥ì„ ê·¸ëŒ€ë¡œ ì´ì–´ë°›ìŒ
 				else {
 					path[start][next] = path[start][cur];
 				}
@@ -53,28 +53,28 @@ int main() {
 	cin.tie(NULL);
 
 	int n, m;
-	cin >> n >> m; // n : ³ëµå ¼ö, m : ÁıÇÏÀå ¼ö
+	cin >> n >> m; // n : ë…¸ë“œ ìˆ˜, m : ì§‘í•˜ì¥ ìˆ˜
 
 	vector<vector<pair<int, int>>>nodes(n + 1);
 	for (int i = 0; i < m; i++) {
-		// u, v : ³ëµå, w : °¡ÁßÄ¡
+		// u, v : ë…¸ë“œ, w : ê°€ì¤‘ì¹˜
 		int u, v, w;
 		cin >> u >> v >> w;
 
-		// ¾ç¹æÇâ ±×·¡ÇÁ
+		// ì–‘ë°©í–¥ ê·¸ë˜í”„
 		nodes[u].push_back({ v, w });
 		nodes[v].push_back({ u, w });
 	}
 
-	// path[i][j] : i¿¡¼­ j·Î °¥ ¶§ Ã¹ ¹øÂ°·Î °ÅÃÄ¾ß ÇÒ ³ëµå
+	// path[i][j] : iì—ì„œ jë¡œ ê°ˆ ë•Œ ì²« ë²ˆì§¸ë¡œ ê±°ì³ì•¼ í•  ë…¸ë“œ
 	vector<vector<int>> path(n + 1, vector<int>(n + 1));
 
-	// °¢ ³ëµå¸¦ ½ÃÀÛÁ¡À¸·ÎÇØ¼­ ´ÙÀÍ½ºÆ®¶ó ¼öÇà
+	// ê° ë…¸ë“œë¥¼ ì‹œì‘ì ìœ¼ë¡œí•´ì„œ ë‹¤ìµìŠ¤íŠ¸ë¼ ìˆ˜í–‰
 	for (int start = 1; start <= n; start++) {
 		dijkstra(nodes, path, start, n);
 	}
 
-	// °á°ú Ãâ·Â
+	// ê²°ê³¼ ì¶œë ¥
 	for (int i = 1; i <= n; i++) {
 		for (int j = 1; j <= n; j++) {
 			if (i == j) {
