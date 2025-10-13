@@ -1,5 +1,5 @@
-// ¹®Á¦ : https://www.acmicpc.net/problem/1005
-// Á¦¸ñ : ACM Craft
+// ë¬¸ì œ : https://www.acmicpc.net/problem/1005
+// ì œëª© : ACM Craft
 
 #include <iostream>
 #include <queue>
