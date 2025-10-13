@@ -1,7 +1,7 @@
-// ¹®Á¦: https://www.acmicpc.net/problem/2166
-// Á¦¸ñ: ´Ù°¢ÇüÀÇ ¸éÀû
+// ë¬¸ì œ: https://www.acmicpc.net/problem/2166
+// ì œëª©: ë‹¤ê°í˜•ì˜ ë©´ì 
 
-// ½Å¹ß²ö °ø½ÄÀ» »ç¿ë
+// ì‹ ë°œëˆ ê³µì‹ì„ ì‚¬ìš©
 #include <iostream>
 #include <cmath>
 #include <vector>
