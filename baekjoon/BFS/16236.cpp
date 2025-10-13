@@ -1,5 +1,5 @@
-// ¹®Á¦: https://www.acmicpc.net/problem/16236
-// Á¦¸ñ: ¾Æ±â »ó¾î
+// ë¬¸ì œ : https://www.acmicpc.net/problem/16236
+// ì œëª© : ì•„ê¸°ìƒì–´
 
 #include <iostream>
 #include <queue>
