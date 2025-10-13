@@ -1,11 +1,11 @@
-// ¹®Á¦: https://www.acmicpc.net/problem/13172
-// Á¦¸ñ: ¢²
+// ë¬¸ì œ: https://www.acmicpc.net/problem/13172
+// ì œëª©: âˆ‘
 
 #include <iostream>
 
 using namespace std;
 
-// Ã³À½¿£ ºê·çÆ®Æ÷½º·Î Á¢±ÙÇßÁö¸¸, ½Ã°£ÃÊ°ú°¡ ¹ß»ý ÀÌÈÄ ºÐÇÒ Á¤º¹À» ÀÌ¿ëÇÑ Á¢±ÙÀ¸·Î º¯°æ
+// ì²˜ìŒì—” ë¸Œë£¨íŠ¸í¬ìŠ¤ë¡œ ì ‘ê·¼í–ˆì§€ë§Œ, ì‹œê°„ì´ˆê³¼ê°€ ë°œìƒ ì´í›„ ë¶„í•  ì •ë³µì„ ì´ìš©í•œ ì ‘ê·¼ìœ¼ë¡œ ë³€ê²½
 long long mod_mult(long long a, long long b) {
 	long long result = 1;
 	a %= 1000000007;
