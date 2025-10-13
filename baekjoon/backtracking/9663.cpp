@@ -1,5 +1,5 @@
-// ¹®Á¦: https://www.acmicpc.net/problem/9663
-// Á¦¸ñ: N-Queens
+// ë¬¸ì œ : https://www.acmicpc.net/problem/9663
+// ì œëª© : N-Queens
 
 #include <iostream>
 #include <vector>
