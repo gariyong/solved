@@ -1,8 +1,8 @@
-// ¹®Á¦ : https://www.acmicpc.net/problem/1647
-// Á¦¸ñ : µµ½Ã ºÐÇÒ °èÈ¹
+// ë¬¸ì œ : https://www.acmicpc.net/problem/1647
+// ì œëª© : ë„ì‹œ ë¶„í•  ê³„íš
 
-// ´ÙÀÍ½ºÆ®¶ó·Î Á¢±ÙÇßÀ¸³ª ½ÃÀÛ Á¤Á¡À» ¾îµð·Î Àâ´À³Ä¿¡ µû¶ó ´äÀÌ ´Þ¶óÁö´Â ¹®Á¦°¡ ¹ß»ý
-// Å©·ç½ºÄ® or ÇÁ¸² ¾Ë°í¸®Áò Áß Å©·ç½ºÄ®·Î Ç®ÀÌ
+// ë‹¤ìµìŠ¤íŠ¸ë¼ë¡œ ì ‘ê·¼í–ˆìœ¼ë‚˜ ì‹œìž‘ ì •ì ì„ ì–´ë””ë¡œ ìž¡ëŠëƒì— ë”°ë¼ ë‹µì´ ë‹¬ë¼ì§€ëŠ” ë¬¸ì œê°€ ë°œìƒ
+// í¬ë£¨ìŠ¤ì¹¼ or í”„ë¦¼ ì•Œê³ ë¦¬ì¦˜ ì¤‘ í¬ë£¨ìŠ¤ì¹¼ë¡œ í’€ì´
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -54,8 +54,8 @@ int main() {
         cin >> edges[i].a >> edges[i].b >> edges[i].cost;
     }
 
-    //  ¶÷´Ù ÇÔ¼ö Á¤·Ä
-    // ÇÑ ¹ø ¾²°í ¹ö¸± ÇÔ¼ö => ¶÷´Ù(ÀÍ¸í) ÇÔ¼ö·Î Àü´Þ °¡´É
+    //  ëžŒë‹¤ í•¨ìˆ˜ ì •ë ¬
+    // í•œ ë²ˆ ì“°ê³  ë²„ë¦´ í•¨ìˆ˜ => ëžŒë‹¤(ìµëª…) í•¨ìˆ˜ë¡œ ì „ë‹¬ ê°€ëŠ¥
     sort(edges.begin(), edges.end(), [](Edge& e1, Edge& e2) {
         return e1.cost < e2.cost;
         });
