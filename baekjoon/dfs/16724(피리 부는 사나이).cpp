@@ -1,5 +1,5 @@
-// ¹®Á¦ : https://www.acmicpc.net/problem/16724
-// Á¦¸ñ : ÇÇ¸® ºÎ´Â »ç³ªÀÌ
+// ë¬¸ì œ : https://www.acmicpc.net/problem/16724
+// ì œëª© : í”¼ë¦¬ ë¶€ëŠ” ì‚¬ë‚˜ì´
 
 #include <iostream>
 #include <string>
