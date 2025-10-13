@@ -1,5 +1,5 @@
-// ╧╝а╕: https://www.acmicpc.net/problem/2206
-// а╕╦Я: ╨╝ ╨н╪Ж╟М юл╣©го╠Б
+// К╛╦Л═°: https://www.acmicpc.net/problem/2206
+// Л═°К╙╘: К╡╫ К╤─Л┬≤ЙЁ═ Л²╢К▐≥М∙≤Й╦╟
 
 #include <iostream>
 #include <queue>
