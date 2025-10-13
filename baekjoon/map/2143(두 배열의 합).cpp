@@ -1,5 +1,5 @@
-// ╧╝а╕ : https://www.acmicpc.net/problem/2143
-// а╕╦Я : ╣н ╧Х©╜юг гу
+// К╛╦Л═° : https://www.acmicpc.net/problem/2143
+// ц│б╕б╦ц╠ : К▒░ К╟╟Л≈╢Л²≤ М∙╘
 
 #include <iostream>
 #include <vector>
