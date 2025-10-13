@@ -1,5 +1,5 @@
-// ¹®Á¦: https://www.acmicpc.net/problem/1238
-// Á¦¸ñ: ÆÄÆ¼
+// ë¬¸ì œ: https://www.acmicpc.net/problem/1238
+// ì œëª©: íŒŒí‹°
 
 #include <iostream>
 #include <vector>
@@ -39,7 +39,7 @@ int main() {
     int n, m, x;
     cin >> n >> m >> x;
 
-    // ÀÎÁ¢ Çà·Ä -> ÀÎÁ¢ ¸®½ºÆ®·Î º¯°æ + ¿ª¹æÇâ ±×·¡ÇÁ Ãß°¡
+    // ì¸ì ‘ í–‰ë ¬ -> ì¸ì ‘ ë¦¬ìŠ¤íŠ¸ë¡œ ë³€ê²½ + ì—­ë°©í–¥ ê·¸ë˜í”„ ì¶”ê°€
     vector<vector<pair<int, int>>> graph(n + 1);
     vector<vector<pair<int, int>>> reverse_graph(n + 1);
 
@@ -53,7 +53,7 @@ int main() {
     vector<int> to_x(n + 1, INF);
     vector<int> from_x(n + 1, INF);
 
-    // ´ÙÀÍ½ºÆ®¶ó ½ÇÇàÀ» n¹ø ½ÇÇà -> 2¹ø ½ÇÇàÀ¸·Î ¼öÁ¤
+    // ë‹¤ìµìŠ¤íŠ¸ë¼ ì‹¤í–‰ì„ në²ˆ ì‹¤í–‰ -> 2ë²ˆ ì‹¤í–‰ìœ¼ë¡œ ìˆ˜ì •
     dijkstra(reverse_graph, to_x, x);
     dijkstra(graph, from_x, x);
 
