@@ -1,7 +1,7 @@
-// ¹®Á¦: https://www.acmicpc.net/problem/1197
-// Á¦¸ñ: ÃÖ¼Ò ½ºÆÐ´× Æ®¸®
+// ë¬¸ì œ: https://www.acmicpc.net/problem/1197
+// ì œëª©: ìµœì†Œ ìŠ¤íŒ¨ë‹ íŠ¸ë¦¬
 
-// ÇÁ¸² ¾Ë°í¸®Áò »ç¿ë
+// í”„ë¦¼ ì•Œê³ ë¦¬ì¦˜ ì‚¬ìš©
 #include <iostream>
 #include <vector>
 #include <queue>
