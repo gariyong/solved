@@ -1,5 +1,5 @@
-// 巩力: https://www.acmicpc.net/problem/14938
-// 力格: 辑碍弊扼款靛
+// 氍胳牅 : https://www.acmicpc.net/problem/14938
+// 鞝滊 : 靹滉皶攴鸽澕鞖措摐
 
 #include <iostream>
 #include <queue>
