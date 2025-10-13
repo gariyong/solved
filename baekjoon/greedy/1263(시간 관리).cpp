@@ -1,5 +1,5 @@
-// 巩力 : https://www.acmicpc.net/problem/1263
-// 力格 : 矫埃 包府
+// 鹿庐脕娄 : https://www.acmicpc.net/problem/1263
+// 脕娄赂帽 : 陆脙掳拢 掳眉赂庐
 
 #include <iostream>
 #include <vector>
