@@ -1,5 +1,5 @@
-// ¹®Á¦: https://www.acmicpc.net/problem/1068
-// Á¦¸ñ: Æ®¸®
+// ë¬¸ì œ: https://www.acmicpc.net/problem/1068
+// ì œëª©: íŠ¸ë¦¬
 
 #include <iostream>
 #include <vector>
@@ -8,7 +8,7 @@
 using namespace std;
 
 
-// ½Ç¼öÇÑ ºÎºĞ: ÀÌÁøÆ®¸®¶ó°í »ı°¢Çß¾úÀ½, ½ÇÁ¦·Ğ ÀÏ¹İ Æ®¸®
+// ì‹¤ìˆ˜í•œ ë¶€ë¶„: ì´ì§„íŠ¸ë¦¬ë¼ê³  ìƒê°í–ˆì—ˆìŒ, ì‹¤ì œë¡  ì¼ë°˜ íŠ¸ë¦¬
 struct Node {
 	Node* parent = nullptr;
 	vector<Node*> children;
@@ -44,7 +44,7 @@ int main() {
 		return 0;
 	}
 
-	//½Ç¼öÇÑ ºÎºĞ: ±íÀº º¹»ç, ¾èÀº º¹»ç¸¦ »ı°¢ÇÏÁö ¸øÇÏ°í ¹«ÀÛÁ¤ earse¸¦ »ç¿ëÇÔ, queue<Node> -> queue<Node*>·Î º¯°æ
+	//ì‹¤ìˆ˜í•œ ë¶€ë¶„: ê¹Šì€ ë³µì‚¬, ì–•ì€ ë³µì‚¬ë¥¼ ìƒê°í•˜ì§€ ëª»í•˜ê³  ë¬´ì‘ì • earseë¥¼ ì‚¬ìš©í•¨, queue<Node> -> queue<Node*>ë¡œ ë³€ê²½
 	queue<Node*> q;
 	q.push(&nodes[start]);
 
