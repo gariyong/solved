@@ -1,6 +1,6 @@
-// ¹®Á¦ : https://www.acmicpc.net/problem/2162
-// Á¦¸ñ : ¼±ºĞ ±×·ì
-// ¾Ë°í¸®Áò : CCW(Count ClockWise)
+// ë¬¸ì œ : https://www.acmicpc.net/problem/2162
+// ì œëª© : ì„ ë¶„ ê·¸ë£¹
+// ì•Œê³ ë¦¬ì¦˜ : CCW(Count ClockWise)
 
 #include <iostream>
 #include <algorithm>
@@ -8,12 +8,12 @@
 
 using namespace std;
 
-// ¼±ºĞ ±¸Á¶Ã¼ : µÎ Á¡ (a, b)·Î ±¸¼ºµÊ
+// ì„ ë¶„ êµ¬ì¡°ì²´ : ë‘ ì  (a, b)ë¡œ êµ¬ì„±ë¨
 struct Line_seg {
 	pair<int, int> a, b;
 };
 
-// ºÎ¸ğ ³ëµå¸¦ Ã£´Â ÇÔ¼ö
+// ë¶€ëª¨ ë…¸ë“œë¥¼ ì°¾ëŠ” í•¨ìˆ˜
 int find(vector<int>& parent, int x) {
 	if (parent[x] == x) {
 		return parent[x];
@@ -22,24 +22,24 @@ int find(vector<int>& parent, int x) {
 	return parent[x] = find(parent, parent[x]);
 }
 
-// µÎ ÁıÇÕÀ» ÇÕÄ¡´Â ÇÔ¼ö
-// cnt[x] : ÇØ´ç ±×·ìÀÇ ¼±ºĞ °³¼ö
+// ë‘ ì§‘í•©ì„ í•©ì¹˜ëŠ” í•¨ìˆ˜
+// cnt[x] : í•´ë‹¹ ê·¸ë£¹ì˜ ì„ ë¶„ ê°œìˆ˜
 void unite(vector<int>& parent, vector<int>& cnt, int a, int b) {
 	a = find(parent, a);
 	b = find(parent, b);
 
 	if (a != b) {
-		// b ±×·ì¿¡ a ±×·ìÀ» ÇÕÄ§
+		// b ê·¸ë£¹ì— a ê·¸ë£¹ì„ í•©ì¹¨
 		parent[a] = b;
-		cnt[b] += cnt[a]; // ±×·ì Å©±â ÇÕÄ¡±â
-		cnt[a] = 0;		  // Èí¼öµÈ ±×·ìÀÇ Å©±â´Â 0
+		cnt[b] += cnt[a]; // ê·¸ë£¹ í¬ê¸° í•©ì¹˜ê¸°
+		cnt[a] = 0;		  // í¡ìˆ˜ëœ ê·¸ë£¹ì˜ í¬ê¸°ëŠ” 0
 	}
 }
 
-// CCW (Counter ClockWise) ¾Ë°í¸®Áò
-// res > 0 : ¹İ½Ã°è ¹æÇâ
-// res < 0 : ½Ã°è ¹æÇâ
-// res = 0 : ÀÏÁ÷¼±
+// CCW (Counter ClockWise) ì•Œê³ ë¦¬ì¦˜
+// res > 0 : ë°˜ì‹œê³„ ë°©í–¥
+// res < 0 : ì‹œê³„ ë°©í–¥
+// res = 0 : ì¼ì§ì„ 
 int ccw(pair<int, int> p1, pair<int, int> p2, pair<int, int> p3) {
 	int res = (p2.first - p1.first) * (p3.second - p1.second)
 		- (p2.second - p1.second) * (p3.first - p1.first);
@@ -54,32 +54,32 @@ int ccw(pair<int, int> p1, pair<int, int> p2, pair<int, int> p3) {
 	return 0;
 }
 
-// CCW °ªÀ» ÀÌ¿ëÇÏ¿© ±³Â÷ Á¶°ÇÀ» ÆÇÁ¤ÇÏ´Â ÇÔ¼ö
-// 1. ÀÏ¹İ ±³Â÷ : ccw1 * ccw2 <= 0 && ccw3 * ccw4 <= 0
-// 2. ÀÏÁ÷¼± »óÀÇ °æ¿ì¿£ ÁÂÇ¥ ºñ±³·Î °ãÄ§ ÆÇÁ¤
+// CCW ê°’ì„ ì´ìš©í•˜ì—¬ êµì°¨ ì¡°ê±´ì„ íŒì •í•˜ëŠ” í•¨ìˆ˜
+// 1. ì¼ë°˜ êµì°¨ : ccw1 * ccw2 <= 0 && ccw3 * ccw4 <= 0
+// 2. ì¼ì§ì„  ìƒì˜ ê²½ìš°ì—” ì¢Œí‘œ ë¹„êµë¡œ ê²¹ì¹¨ íŒì •
 bool is_cross(Line_seg l, Line_seg r) {
 	int ccw1 = ccw(l.a, l.b, r.a);
 	int ccw2 = ccw(l.a, l.b, r.b);
 	int ccw3 = ccw(r.a, r.b, l.a);
 	int ccw4 = ccw(r.a, r.b, l.b);
 
-	// µÎ ¼±ºĞÀÌ ±³Â÷ÇÏ°Å³ª ´ê´Â °æ¿ì
+	// ë‘ ì„ ë¶„ì´ êµì°¨í•˜ê±°ë‚˜ ë‹¿ëŠ” ê²½ìš°
 	if (ccw1 * ccw2 <= 0 && ccw3 * ccw4 <= 0) {
-		// ³× Á¡ ¸ğµÎ ÀÏÁ÷¼± »ó¿¡ ÀÖ´Â °æ¿ì
+		// ë„¤ ì  ëª¨ë‘ ì¼ì§ì„  ìƒì— ìˆëŠ” ê²½ìš°
 		if (ccw1 == 0 && ccw2 == 0 && ccw3 == 0 && ccw4 == 0) {
-			// µÎ ¼±ºĞÀÇ Á¡ ¼ø¼­ Á¤·Ä
+			// ë‘ ì„ ë¶„ì˜ ì  ìˆœì„œ ì •ë ¬
 			if (l.a > l.b) swap(l.a, l.b);
 			if (r.a > r.b) swap(r.a, r.b);
 
-			// °ãÄ¡Áö ¾Ê´Â °æ¿ì Á¦¿Ü
+			// ê²¹ì¹˜ì§€ ì•ŠëŠ” ê²½ìš° ì œì™¸
 			return !(l.b < r.a || r.b < l.a);
 		}
 
-		// ±³Â÷
+		// êµì°¨
 		return true;
 	}
 
-	// ±³Â÷ÇÏÁö ¾ÊÀ½
+	// êµì°¨í•˜ì§€ ì•ŠìŒ
 	return false;
 }
 
@@ -95,14 +95,14 @@ int main() {
 		cin >> lines[i].a.first >> lines[i].a.second >> lines[i].b.first >> lines[i].b.second;
 	}
 
-	// °¢ ¼±ºĞÀ» µ¶¸³µÈ ÁıÇÕÀ¸·Î ÃÊ±âÈ­
+	// ê° ì„ ë¶„ì„ ë…ë¦½ëœ ì§‘í•©ìœ¼ë¡œ ì´ˆê¸°í™”
 	vector<int>parent(n);
-	vector<int>cnt(n, 1); // ÃÊ±â ±×·ì Å©±â = 1
+	vector<int>cnt(n, 1); // ì´ˆê¸° ê·¸ë£¹ í¬ê¸° = 1
 	for (int i = 0; i < n; i++) {
 		parent[i] = i;
 	}
 
-	// ¸ğµç ¼±ºĞ ½ÖÀ» ºñ±³ÇÏ¿© ±³Â÷ÇÏ¸é °°Àº ±×·ìÀ¸·Î ÇÕÄ§
+	// ëª¨ë“  ì„ ë¶„ ìŒì„ ë¹„êµí•˜ì—¬ êµì°¨í•˜ë©´ ê°™ì€ ê·¸ë£¹ìœ¼ë¡œ í•©ì¹¨
 	for (int i = 0; i < n; i++) {
 		for (int j = i + 1; j < n; j++) {
 			if (is_cross(lines[i], lines[j])) {
@@ -115,16 +115,16 @@ int main() {
 	int groups = 0;
 	int max_size = 0;
 	for (int i = 0; i < n; i++) {
-		int cur = find(parent, i); // ´ëÇ¥ ³ëµå Ã£±â
+		int cur = find(parent, i); // ëŒ€í‘œ ë…¸ë“œ ì°¾ê¸°
 
-		if (cur == i) { // ·çÆ® ³ëµå¸é »õ·Î¿î ±×·ì
+		if (cur == i) { // ë£¨íŠ¸ ë…¸ë“œë©´ ìƒˆë¡œìš´ ê·¸ë£¹
 			groups++;
 		}
 
-		max_size = max(max_size, cnt[cur]); // ÃÖ´ë ±×·ì Å©±â °»½Å
+		max_size = max(max_size, cnt[cur]); // ìµœëŒ€ ê·¸ë£¹ í¬ê¸° ê°±ì‹ 
 	}
 
-	cout << groups << '\n' << max_size; // °á°ú Ãâ·Â
+	cout << groups << '\n' << max_size; // ê²°ê³¼ ì¶œë ¥
 
 	return 0;
 }
