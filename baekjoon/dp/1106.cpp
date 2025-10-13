@@ -1,5 +1,5 @@
-// ¹®Á¦: https://www.acmicpc.net/problem/1106
-// Á¦¸ñ: È£ÅÚ
+// ë¬¸ì œ : https://www.acmicpc.net/problem/1106
+// ì œëª© : í˜¸í…”
 
 #include <iostream>
 #include <vector>
