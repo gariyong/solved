@@ -1,5 +1,5 @@
-// ¹®Á¦ : https://www.acmicpc.net/problem/17404
-// Á¦¸ñ : RGB°Å¸® 2
+// ë¬¸ì œ : https://www.acmicpc.net/problem/17404
+// ì œëª© : RGBê±°ë¦¬ 2
 
 #include <iostream>
 #include <vector>
@@ -23,8 +23,8 @@ int main() {
 
 	int answer = INF;
 
-	// ÀÌÀü ÁýÀÇ »ö°ú ÇöÀç ÁýÀÇ »öÀ» ºñ±³ÇÏ´Â ºÎºÐÀ» ±¸ÇöÇÏ´Â ºÎºÐ¿¡ ¾î·Á¿òÀÌ ÀÖ¾úÀ½
-	// dp°¡ ÀÌÀü °ªÀ» ÀÌ¿ëÇØ¼­ ÇöÀç °ªÀ» ±¸ÇÏ´Â Á¡È­½ÄÀÌ¹Ç·Î, ÀÌÀü ÁýÀÇ »ö°ú ÇöÀç ÁýÀÇ »öÀÌ ´Ù¸¦ ¶§¸¸ ºñ¿ëÀ» ´õÇÏµµ·Ï ±¸Çö << ÀÌ ºÎºÐÀ» Àß »ý°¢ÇØ³»¾ß ÇßÀ½
+	// ì´ì „ ì§‘ì˜ ìƒ‰ê³¼ í˜„ìž¬ ì§‘ì˜ ìƒ‰ì„ ë¹„êµí•˜ëŠ” ë¶€ë¶„ì„ êµ¬í˜„í•˜ëŠ” ë¶€ë¶„ì— ì–´ë ¤ì›€ì´ ìžˆì—ˆìŒ
+	// dpê°€ ì´ì „ ê°’ì„ ì´ìš©í•´ì„œ í˜„ìž¬ ê°’ì„ êµ¬í•˜ëŠ” ì í™”ì‹ì´ë¯€ë¡œ, ì´ì „ ì§‘ì˜ ìƒ‰ê³¼ í˜„ìž¬ ì§‘ì˜ ìƒ‰ì´ ë‹¤ë¥¼ ë•Œë§Œ ë¹„ìš©ì„ ë”í•˜ë„ë¡ êµ¬í˜„ << ì´ ë¶€ë¶„ì„ ìž˜ ìƒê°í•´ë‚´ì•¼ í–ˆìŒ
 	for (int start_color = 0; start_color < 3; ++start_color) {
 		vector<vector<int>> dp(n + 1, vector<int>(3, INF));
 
