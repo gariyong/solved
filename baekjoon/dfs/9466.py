@@ -1,7 +1,7 @@
-# ╧╝а╕ : https://www.acmicpc.net/problem/9466
-# а╕╦Я : ер га╥на╖ф╝
+# К╛╦Л═° : https://www.acmicpc.net/problem/9466
+# Л═°К╙╘ : М┘─ М■└К║°Л═²М┼╦
 
-mport sys
+import sys
 
 sys.setrecursionlimit(10**6)
 
